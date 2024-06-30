@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: 0 74% 40%;
+  }
+
+  /* Roboto Regular (400) */
+  @font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(../fonts/Roboto-Regular.woff2) format("woff2");
+  }
+
+  /* Roboto Italic (400) */
+  @font-face {
+    font-family: "Roboto";
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url(../fonts/Roboto-Italic.woff2) format("woff2");
+  }
+
+  /* Roboto Thin (100) */
+  @font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url(../fonts/Roboto-Thin.woff2) format("woff2");
+  }
+
+  /* Roboto Thin Italic (100) */
+  @font-face {
+    font-family: "Roboto";
+    font-style: italic;
+    font-weight: 100;
+    font-display: swap;
+    src: url(../fonts/Roboto-ThinItalic.woff2) format("woff2");
+  }
+
+  /* Roboto Light (300) */
+  @font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(../fonts/Roboto-Light.woff2) format("woff2");
+  }
+
+  /* Roboto Light Italic (300) */
+  @font-face {
+    font-family: "Roboto";
+    font-style: italic;
+    font-weight: 300;
+    font-display: swap;
+    src: url(../fonts/Roboto-LightItalic.woff2) format("woff2");
+  }
+
+  /* Roboto Medium (500) */
+  @font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(../fonts/Roboto-Medium.woff2) format("woff2");
+  }
+
+  /* Roboto Medium Italic (500) */
+  @font-face {
+    font-family: "Roboto";
+    font-style: italic;
+    font-weight: 500;
+    font-display: swap;
+    src: url(../fonts/Roboto-MediumItalic.woff2) format("woff2");
+  }
+
+  /* Roboto Bold (700) */
+  @font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(../fonts/Roboto-Bold.woff2) format("woff2");
+  }
+
+  /* Roboto Bold Italic (700) */
+  @font-face {
+    font-family: "Roboto";
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url(../fonts/Roboto-BoldItalic.woff2) format("woff2");
+  }
+
+  /* Roboto Black (900) */
+  @font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url(../fonts/Roboto-Black.woff2) format("woff2");
+  }
+
+  /* Roboto Black Italic (900) */
+  @font-face {
+    font-family: "Roboto";
+    font-style: italic;
+    font-weight: 900;
+    font-display: swap;
+    src: url(../fonts/Roboto-BlackItalic.woff2) format("woff2");
+  }
+
+  body,
+  html {
+    font-family: "Roboto", sans-serif !important;
+    @apply outline-primary text-black;
+  }
+}
+
+.wpforms-submit {
+  @apply bg-[#C60000] py-5 h-fit px-8 rounded-lg uppercase border font-medium border-white border-solid !important;
+}
+
+.wpforms-title {
+  @apply md:text-4xl text-2xl font-medium text-center text-white !important;
+}
+
+.wpforms-field-label {
+  @apply text-white md:mb-2 mb-1 !important;
+}
+
+.wpforms-field-required {
+  @apply outline-blue-500 py-5 !important;
+}
+
+.wpforms-submit-container {
+  @apply flex justify-center !important;
+}
+
+.wpforms-field {
+  @apply py-2 !important;
+}
+
+.form-link {
+  @apply text-[#ffa500] capitalize !important;
+}
+
+.wpforms-required-label {
+  @apply text-red-500 capitalize !important;
+}
+
+.wpforms-head-container {
+  @apply pb-0 !important;
+}
+
+.form-message-term {
+  @apply text-center mt-2 !important;
+}
