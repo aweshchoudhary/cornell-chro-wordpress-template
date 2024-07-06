@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CORNELL CHRO Leadership Program</title>
+    <title><?php echo the_title(); ?></title>
     <?php wp_head() ?>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/styles/global.css">
 </head>
 
 <body <?php body_class() ?>>
@@ -16,11 +17,15 @@
     <header>
         <div class="flex items-center justify-between md:py-10 md:px-28 px-5 py-8 md:gap-0 gap-20">
             <figure>
-                <img src="<?php echo get_template_directory_uri() ?>/media/logo.jpg" alt="">
+                <a href="/">
+                    <img src="<?php echo get_template_directory_uri() ?>/media/logo.jpg" alt="">
+                </a>
                 <figcaption></figcaption>
             </figure>
             <figure>
-                <img width="300" src="<?php echo get_template_directory_uri() ?>/media/ilr-logo.png" alt="">
+                <a href="/">
+                    <img width="300" src="<?php echo get_template_directory_uri() ?>/media/ilr-logo.png" alt="">
+                </a>
                 <figcaption></figcaption>
             </figure>
         </div>

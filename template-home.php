@@ -1,18 +1,20 @@
 <?php
 // Template Name: Home Page
 
-get_header()
+get_header();
+
+$program_overview_sec = get_field("program_overview_section");
 ?>
 <article>
-    <section id="getbrochure" class="md:flex md:h-[700px]">
+    <section id="get-brochure" class="md:flex">
         <div class="flex-1">
             <figure class="h-full w-full">
-                <img class="w-full h-full object-cover" src="<?php echo get_template_directory_uri() ?>/media/hero-image.webp" alt="">
+                <img class="w-full h-full md:min-h-[700px] object-cover" src="<?php echo get_template_directory_uri() ?>/media/hero-image.webp" alt="" sizimagees="(max-width: 130px) 100vw, 130px">
                 <figcaption></figcaption>
             </figure>
         </div>
         <div class="flex-1 bg-[#636363] text-white">
-            <div class="md:py-10 md:px-20 p-5">
+            <div class="md:py-10 md:px-20 p-5 main-form">
                 <?php echo do_shortcode('[wpforms id="126" title="true"]');
                 ?>
             </div>
@@ -21,42 +23,35 @@ get_header()
     <section class="md:px-20 md:py-10 p-5 flex md:flex-row flex-col items-center justify-center md:gap-20 gap-10">
         <div class="flex-1">
             <h2 class="md:text-4xl text-2xl text-center font-bold text-[#636363]">
-                Program Overview
+                <?php echo $program_overview_sec["title"]; ?>
             </h2>
-            <p class="mt-3 text-justify">
-                To shape the future of work and the organization of the future, today’s HR leaders and CHRO’s need to reimagine the basic tenets of Human Resource Management. To thrive in this ever-changing and complex ecosystem, HR leaders need a new set of skills and expertise. Cornell’s CHRO Leadership Program is designed to empower senior HR professionals to tackle the challenges of the new normal.
-            </p>
+            <div class="mt-3 text-justify">
+                <?php echo $program_overview_sec["description"]; ?>
+            </div>
         </div>
         <div class="flex-1">
-            <ul class="border-2 max-w-[370px] border-primary rounded-3xl px-5 divide-y-2 divide-primary">
-                <li class="flex items-center gap-5 py-5 text-primary">
-                    <img width="50" src="<?php echo get_template_directory_uri() ?>/media/icon-1.png" alt="icon">
-                    <div>
-                        <h3 class="text-xl">
-                            STARTS ON
-                        </h3>
-                        <p class="text-2xl font-bold">TBD</p>
-                    </div>
-                </li>
-                <li class="flex items-center gap-5 py-5 text-primary">
-                    <img width="50" src="<?php echo get_template_directory_uri() ?>/media/icon-2.png" alt="icon">
-                    <div>
-                        <h3 class="text-xl">
-                            DURATION
-                        </h3>
-                        <p class="text-2xl font-bold">4 MONTHS</p>
-                    </div>
-                </li>
-                <li class="flex items-center gap-5 py-5 text-primary">
-                    <img width="50" src="<?php echo get_template_directory_uri() ?>/media/icon-3.png" alt="icon">
-                    <div>
-                        <h3 class="text-xl">
-                            PROGRAM FEE
-                        </h3>
-                        <p class="text-2xl font-bold">US$ 4,000</p>
-                        <a href="#" class="mt-3 block font-bold underline">Easy EMI Options Available</a>
-                    </div>
-                </li>
+            <?php $program_table = $program_overview_sec["program_table"];
+            ?>
+            <ul class="border-2 list-none max-w-[370px] border-primary rounded-3xl px-5 divide-y-2 divide-primary">
+                <?php foreach ($program_table["list"] as $item) { ?>
+                    <li class="flex items-center gap-5 py-5 text-primary">
+                        <img width="50" sizes="(max-width: 50px) 100vw, 50px" loading="lazy" src="<?php echo $item["icon"] ?>" alt="icon">
+                        <div>
+                            <h3 class="text-xl">
+                                <?php echo $item["subtitle"] ?>
+                            </h3>
+                            <p class="text-2xl font-bold"><?php echo $item["title"] ?></p>
+
+                            <?php if (!empty($item['action'])) { ?>
+                                <?php
+                                $item_action = $item["action"];
+                                ?>
+                                <button class="mt-3 block font-bold underline" onclick="my_modal_2.showModal()"><?php echo $item_action["title"] ?></button>
+                            <?php } ?>
+
+                        </div>
+                    </li>
+                <?php } ?>
             </ul>
         </div>
     </section>
@@ -64,10 +59,10 @@ get_header()
         <h2 class="md:text-4xl text-2xl font-bold mb-16 text-center">
             Program Benefits
         </h2>
-        <ul class="flex flex-wrap gap-10 items-center justify-center">
+        <ul class="list-none flex flex-wrap gap-10 items-center justify-center">
             <li class="space-y-4 text-center w-fit sm:basis-1/4 basis-full flex-1">
                 <figure class="flex items-center justify-center">
-                    <img height="130" class="h-[110px] object-contain" src="<?php echo get_template_directory_uri() ?>/media/benefit-1.png" alt="">
+                    <img height="130" loading="lazy" class="h-[110px] object-contain" src="<?php echo get_template_directory_uri() ?>/media/benefit-1.png" alt="" sizimagees="(max-width: 130px) 100vw, 130px">
                     <figcaption></figcaption>
                 </figure>
                 <p>
@@ -76,7 +71,7 @@ get_header()
             </li>
             <li class="space-y-4 text-center w-fit sm:basis-1/4 basis-full flex-1">
                 <figure class="flex items-center justify-center">
-                    <img height="130" class="h-[110px] object-contain" src="<?php echo get_template_directory_uri() ?>/media/benefit-2.png" alt="">
+                    <img height="130" loading="lazy" class="h-[110px] object-contain" src="<?php echo get_template_directory_uri() ?>/media/benefit-2.png" alt="image" sizes="(max-width: 130px) 100vw, 130px">
                     <figcaption></figcaption>
                 </figure>
                 <p>
@@ -85,7 +80,7 @@ get_header()
             </li>
             <li class="space-y-4 text-center w-fit sm:basis-1/4 basis-full flex-1">
                 <figure class="flex items-center justify-center">
-                    <img height="130" class="h-[110px] object-contain" src="<?php echo get_template_directory_uri() ?>/media/benefit-3.png" alt="">
+                    <img height="130" loading="lazy" class="h-[110px] object-contain" src="<?php echo get_template_directory_uri() ?>/media/benefit-3.png" alt="" sizimagees="(max-width: 130px) 100vw, 130px">
                     <figcaption></figcaption>
                 </figure>
                 <p>
@@ -94,7 +89,7 @@ get_header()
             </li>
             <li class="space-y-4 text-center w-fit sm:basis-1/4 basis-full flex-1">
                 <figure class="flex items-center justify-center">
-                    <img height="130" class="h-[110px] object-contain" src="<?php echo get_template_directory_uri() ?>/media/benefit-4.png" alt="">
+                    <img height="130" loading="lazy" class="h-[110px] object-contain" src="<?php echo get_template_directory_uri() ?>/media/benefit-4.png" alt="" sizimagees="(max-width: 130px) 100vw, 130px">
                     <figcaption></figcaption>
                 </figure>
                 <p>
@@ -103,7 +98,7 @@ get_header()
             </li>
             <li class="space-y-4 text-center w-fit sm:basis-1/4 basis-full flex-1">
                 <figure class="flex items-center justify-center">
-                    <img height="130" class="h-[110px] object-contain" src="<?php echo get_template_directory_uri() ?>/media/benefit-5.png" alt="">
+                    <img height="130" loading="lazy" class="h-[110px] object-contain" src="<?php echo get_template_directory_uri() ?>/media/benefit-5.png" alt="" sizimagees="(max-width: 130px) 100vw, 130px">
                     <figcaption></figcaption>
                 </figure>
                 <p>
@@ -112,7 +107,7 @@ get_header()
             </li>
             <li class="space-y-4 text-center w-fit sm:basis-1/4 basis-full flex-1">
                 <figure class="flex items-center justify-center">
-                    <img height="130" class="h-[110px] object-contain" src="<?php echo get_template_directory_uri() ?>/media/benefit-6.png" alt="">
+                    <img height="130" loading="lazy" class="h-[110px] object-contain" src="<?php echo get_template_directory_uri() ?>/media/benefit-6.png" alt="" sizimagees="(max-width: 130px) 100vw, 130px">
                     <figcaption></figcaption>
                 </figure>
                 <p>
@@ -125,7 +120,7 @@ get_header()
         <h2 class="md:text-4xl text-2xl font-bold mb-8 text-center text-[#636363]">
             Curriculum
         </h2>
-        <div class="space-y-2 max-w-5xl mx-auto">
+        <div class="space-y-2 max-w-6xl mx-auto">
             <div class="collapse rounded collapse-arrow bg-[#CFCFCF]">
                 <input type="radio" name="my-accordion-1" checked />
                 <div class="collapse-title md:text-lg font-bold flex items-center md:py-2">HR AS A CXO</div>
@@ -134,7 +129,7 @@ get_header()
                         <p>
                             <strong>a. Strategy and HR</strong> <br>
 
-                            This session will focus on advancing participants’ understanding of how organizations strategically position themselves for competitive advantage. It will emphasize the importance of aligning an organization’s customer value proposition to customers’ unmet needs and of investing in core competencies that enable the organization to deliver on this value
+                            This session will focus on advancing participants’ understanding of how organizations strategically position themselves for competitive advantage. It will emphasize the importance of aligning an organization’s customer value proposition to customers’ unmet needs and of investing in core competencies that enable the organization to deliver on this value <br>
                             proposition consistently and repeatedly. Participants will also consider how influences and trends in the external environment shape organizations’ strategic opportunities and threats over time.
                         </p>
 
@@ -206,9 +201,9 @@ get_header()
         </div>
         <div class="mt-10 space-y-10">
             <div>
-                <h3 class="text-xl font-bold text-primary mb-3">Year long access to 1700+ electives</h3>
+                <h3 class="text-xl font-bold text-primary mb-3">Year long access to 2000+ electives</h3>
                 <p>
-                    Choose from over 1700+ electives that will enhance your knowledge and skills across business functions. With unlimited access to Cornell’s resource library, you will have the opportunity to learn something new, every day. Super-specialize in your area of interest from topics across domains like innovation, leadership, marketing, supply chain, finance, service excellence, operations, project management and more.
+                    Choose from over 2000+ electives that will enhance your knowledge and skills across business functions. With unlimited access to Cornell’s resource library, you will have the opportunity to learn something new, every day. Super-specialize in your area of interest from topics across domains like innovation, leadership, marketing, supply chain, finance, service excellence, operations, project management and more.
                 </p>
             </div>
             <div>
@@ -231,19 +226,19 @@ get_header()
                 Indicative content, subject to change based on university guidelines
             </p>
             <figure>
-                <img src="<?php echo get_template_directory_uri() ?>/media/cohort-statistics.jpg" alt="cohort statistics">
+                <img sizes="(min-width: 768px) 40vw, 70vw" loading="lazy" src="<?php echo get_template_directory_uri() ?>/media/cohort-statistics.jpg" alt="cohort statistics">
                 <figcaption class="sr-only"></figcaption>
             </figure>
         </div>
     </section>
-    <section class="md:p-20 p-5">
+    <section class="md:p-10 p-5">
         <h2 class="md:text-4xl text-2xl font-bold mb-8 text-center text-[#636363]">
             Learn from Cornell Faculty
         </h2>
-        <ul class="flex md:flex-wrap md:overflow-x-hidden overflow-x-auto w-screen gap-5">
-            <li class="flex md:flex-row flex-col gap-4 p-6 border border-primary md:basis-1/4 basis-[90%] shrink-0 flex-1">
+        <ul class="flex md:flex-wrap md:overflow-x-hidden overflow-x-auto md:w-auto w-screen gap-5">
+            <li class="flex md:flex-row flex-col gap-4 p-6 border border-primary md:basis-1/4 basis-[90%] md:shrink shrink-0 flex-1">
                 <figure class="shrink-0">
-                    <img width="80" height="80" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/Rebecca-Kehoe.png" alt="Rebecca Kehoe">
+                    <img width="80" height="80" sizes="(min-width: 768px) 40vw, 70vw" loading="lazy" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/Rebecca-Kehoe.png" alt="Rebecca Kehoe">
                     <figcaption class="sr-only">Rebecca Kehoe</figcaption>
                 </figure>
                 <div>
@@ -252,9 +247,9 @@ get_header()
                     <p class="text-sm">Rebecca Kehoe is an Associate Professor of Human Resource Studies in the ILR School at Cornell University. She conducts research in the area of strategic human resource management, with an interest in better understanding how and when organizations achieve human resource-based competitive advantage. She holds a Ph.D., M.S., and B.S. from Cornell University. Prior to joining the faculty of the ILR School, she served on the faculty of Rutgers University. She has taught courses in Human Resource Management and Business Strategy.</p>
                 </div>
             </li>
-            <li class="flex md:flex-row flex-col gap-4 p-6 border border-primary md:basis-1/4 basis-[90%] shrink-0 flex-1">
+            <li class="flex md:flex-row flex-col gap-4 p-6 border border-primary md:basis-1/4 basis-[90%] md:shrink shrink-0 flex-1">
                 <figure class="shrink-0">
-                    <img width="80" height="80" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/Bradford-Bell.png" alt="Bradford Bell">
+                    <img width="80" height="80" sizes="(min-width: 768px) 40vw, 70vw" loading="lazy" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/Bradford-Bell.png" alt="Bradford Bell">
                     <figcaption class="sr-only">Bradford Bell</figcaption>
                 </figure>
                 <div>
@@ -263,9 +258,9 @@ get_header()
                     <p class="text-sm">Bradford S. Bell is the William J. Conaty Professor in Strategic Human Resources and Director of the Center for Advanced Human Resource Studies. He received his B.A. in Psychology from the University of Maryland at College Park and his M.A. and Ph.D. in Industrial and Organizational Psychology from Michigan State University. He worked in the management and organization development department of First USA Bank/Banc One and has worked as an HR consultant for multiple private and public firms. Dr. Bell is a fellow of the Society for Industrial and Organizational Psychology and American Psychological Association.</p>
                 </div>
             </li>
-            <li class="flex md:flex-row flex-col gap-4 p-6 border border-primary md:basis-1/4 basis-[90%] shrink-0 flex-1">
+            <li class="flex md:flex-row flex-col gap-4 p-6 border border-primary md:basis-1/4 basis-[90%] md:shrink shrink-0 flex-1">
                 <figure class="shrink-0">
-                    <img width="80" height="80" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/John-Hausknecht.png" alt="John Hausknecht">
+                    <img width="80" height="80" sizes="(min-width: 768px) 40vw, 70vw" loading="lazy" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/John-Hausknecht.png" alt="John Hausknecht">
                     <figcaption class="sr-only">John Hausknecht</figcaption>
                 </figure>
                 <div>
@@ -274,9 +269,9 @@ get_header()
                     <p class="text-sm">John Hausknecht is professor of human resource studies at Cornell University’s ILR School. His teaching, research, and consulting focuses on HR analytics and staffing-related topics including employee selection and turnover. Professor Hausknecht recently served as the academic director for Cornell’s ILR Executive Education and currently leads the HR analytics working group series for Cornell’s Center for Advanced HR Studies.</p>
                 </div>
             </li>
-            <li class="flex md:flex-row flex-col gap-4 p-6 border border-primary md:basis-1/4 basis-[90%] shrink-0 flex-1">
+            <li class="flex md:flex-row flex-col gap-4 p-6 border border-primary md:basis-1/4 basis-[90%] md:shrink shrink-0 flex-1">
                 <figure class="shrink-0">
-                    <img width="80" height="80" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/Diane-Burton.png" alt="M. Diane Burton">
+                    <img width="80" height="80" sizes="(min-width: 768px) 40vw, 70vw" loading="lazy" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/Diane-Burton.png" alt="M. Diane Burton">
                     <figcaption class="sr-only">M. Diane Burton</figcaption>
                 </figure>
                 <div>
@@ -294,9 +289,9 @@ get_header()
                         School of Business.</p>
                 </div>
             </li>
-            <li class="flex md:flex-row flex-col gap-4 p-6 border border-primary md:basis-1/4 basis-[90%] shrink-0 flex-1">
+            <li class="flex md:flex-row flex-col gap-4 p-6 border border-primary md:basis-1/4 basis-[90%] md:shrink shrink-0 flex-1">
                 <figure class="shrink-0">
-                    <img width="80" height="80" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/Tae-Youn-Park.png" alt="Tae Youn Park">
+                    <img width="80" height="80" sizes="(min-width: 768px) 40vw, 70vw" loading="lazy" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/Tae-Youn-Park.png" alt="Tae Youn Park">
                     <figcaption class="sr-only">Tae Youn Park</figcaption>
                 </figure>
                 <div>
@@ -313,9 +308,9 @@ get_header()
                         the Owen Graduate School of Management. </p>
                 </div>
             </li>
-            <li class="flex md:flex-row flex-col gap-4 p-6 border border-primary md:basis-1/4 basis-[90%] shrink-0 flex-1">
+            <li class="flex md:flex-row flex-col gap-4 p-6 border border-primary md:basis-1/4 basis-[90%] md:shrink shrink-0 flex-1">
                 <figure class="shrink-0">
-                    <img width="80" height="80" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/Adam-Seth-Litwin.png" alt="Adam Seth Litwin">
+                    <img width="80" height="80" sizes="(min-width: 768px) 40vw, 70vw" loading="lazy" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/Adam-Seth-Litwin.png" alt="Adam Seth Litwin">
                     <figcaption class="sr-only">Adam Seth Litwin</figcaption>
                 </figure>
                 <div>
@@ -324,9 +319,9 @@ get_header()
                     <p class="text-sm">Adam Seth Litwin is Associate Professor of Industrial and Labor Relations at Cornell’s ILR School and serves as an associate editor at its flagship journal, the ILR Review. Litwin has published a mix of empirical and conceptual studies intersecting the areas of labor relations and technological change, in both industrial relations and medical journals. Litwin joined Cornell’s ILR faculty in the fall of 2014 after serving as a standing faculty member at Johns Hopkins University, where he held appointments in the Carey Business School and the School of Medicine.</p>
                 </div>
             </li>
-            <li class="flex md:flex-row flex-col gap-4 p-6 border border-primary md:basis-1/4 basis-[90%] shrink-0 flex-1">
+            <li class="flex md:flex-row flex-col gap-4 p-6 border border-primary md:basis-1/4 basis-[90%] md:shrink shrink-0 flex-1">
                 <figure class="shrink-0">
-                    <img width="80" height="80" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/Ben-Rissing.png" alt="Ben Rissing">
+                    <img width="80" height="80" sizes="(min-width: 768px) 40vw, 70vw" loading="lazy" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/Ben-Rissing.png" alt="Ben Rissing">
                     <figcaption class="sr-only">Ben Rissing</figcaption>
                 </figure>
                 <div>
@@ -335,9 +330,9 @@ get_header()
                     <p class="text-sm">Ben A. Rissing studies employment-relevant decisions in organizations, including businesses, government, and academic institutions. He earned his doctorate in management from the Massachusetts Institute of Technology (MIT) Sloan School of Management; master’s degrees in management science and engineering management from MIT and Duke University, respectively; and a bachelor’s degree in mechanical engineering from the University of Virginia. Before joining Cornell University, Ben was the Hugh W. Pearson Visiting Professor of Commerce, Organizations and Entrepreneurship at Brown University. </p>
                 </div>
             </li>
-            <li class="flex md:flex-row flex-col gap-4 p-6 border border-primary md:basis-1/4 basis-[90%] shrink-0 flex-1">
+            <li class="flex md:flex-row flex-col gap-4 p-6 border border-primary md:basis-1/4 basis-[90%] md:shrink shrink-0 flex-1">
                 <figure class="shrink-0">
-                    <img width="80" height="80" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/Lisa-Csencsits.png" alt="Lisa Csencsits">
+                    <img width="80" height="80" sizes="(min-width: 768px) 40vw, 70vw" loading="lazy" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/Lisa-Csencsits.png" alt="Lisa Csencsits">
                     <figcaption class="sr-only">Lisa Csencsits</figcaption>
                 </figure>
                 <div>
@@ -346,9 +341,9 @@ get_header()
                     <p class="text-sm">Lisa Csencsits, Associate Director for Executive Education at Cornell University, ILR, is responsible for the design, development and delivery of customized learning and capability development programs. Lisa holds a B.A. In Psychology from Adelphi University and a M.A. in Industrial/Organizational Psychology from Hofstra University. Ms. Csencsits, as an Organizational Development Practitioner, leverages her experience working with large privately and publicly held companies, as well as her research and educational expertise to provide programs grounded in theory with practical solutions to enhance participant learning and professional development. </p>
                 </div>
             </li>
-            <li class="flex md:flex-row flex-col gap-4 p-6 border border-primary md:basis-1/4 basis-[90%] shrink-0 flex-1">
+            <li class="flex md:flex-row flex-col gap-4 p-6 border border-primary md:basis-1/4 basis-[90%] md:shrink shrink-0 flex-1">
                 <figure class="shrink-0">
-                    <img width="80" height="80" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/Alwin-Smith.png" alt="Alwin Smith">
+                    <img width="80" height="80" sizes="(min-width: 768px) 40vw, 70vw" loading="lazy" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/Alwin-Smith.png" alt="Alwin Smith">
                     <figcaption class="sr-only">Alwin Smith</figcaption>
                 </figure>
                 <div>
@@ -372,7 +367,7 @@ get_header()
         </div>
 
         <figure class="flex justify-center relative z-30">
-            <img src="<?php echo get_template_directory_uri() ?>/media/chro-certificate.jpg" width="650" class="md:w-auto w-[90%]" alt="cornell unversitiy program certificate">
+            <img src="<?php echo get_template_directory_uri() ?>/media/chro-certificate.jpg" width="650" class="md:w-[650px] object-contain w-[90%]" alt="cornell unversitiy program certificate">
             <figcaption class="sr-only">cornell unversitiy program certificate</figcaption>
         </figure>
 
@@ -389,76 +384,148 @@ get_header()
             </p>
         </div>
     </section>
-    <section class="md:p-20 p-5 pt-10">
-        <h2 class="md:text-4xl text-2xl font-bold mb-8 text-center text-[#636363]">
+    <section class="md:py-20 p-5 pt-10">
+        <h2 class="md:text-4xl px-20 text-2xl font-bold mb-8 text-center text-[#636363]">
             Testimonials
         </h2>
-        <div class="slick-slider-testimonials">
-            <div class="py-20 px-2.5 h-full">
-                <div class="p-5 relative overflow-visible drop-shadow-lg text-center min-h-[382px] flex flex-col h-full bg-[#efefef]">
-                    <figure class="flex absolute -top-16 left-1/2 -translate-x-1/2 justify-center">
-                        <img width="120" src="<?php echo get_template_directory_uri() ?>/media/reviews/Manisha-Sharma-Prasad.png" alt="Manisha Sharma Prasad">
-                        <figcaption class="sr-only">Manisha Sharma Prasad</figcaption>
-                    </figure>
-                    <div class="flex flex-col flex-1 justify-between">
-                        <p class="text-xl mt-[70px]">
-                            It's been a very insightful journey all through, varied dimensions covered brilliantly with relevant case studies and very interactive sessions with faculty and peers
-                        </p>
-                        <div class="mt-5">
-                            <p class="uppercase text-lg font-bold text-primary">Manisha Sharma Prasad</p>
-                            <p class="text-lg">
-                                SVP & Head Human Resources
-                                <br>
-                                CRIF India & South Asia
+        <div class="relative">
+            <button class="custom-slick-prev absolute top-1/2 -translate-y-1/2 left-3 text-3xl p-3 rounded-full bg-primary text-white z-[99]"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 12H4m0 0l6-6m-6 6l6 6" />
+                </svg></button>
+            <button class="custom-slick-next absolute top-1/2 -translate-y-1/2 right-3 text-3xl p-3 rounded-full bg-primary text-white z-[99]"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                    <path fill="currentColor" fill-rule="evenodd" d="M13.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06l4.72-4.72H4a.75.75 0 0 1 0-1.5h14.19l-4.72-4.72a.75.75 0 0 1 0-1.06" clip-rule="evenodd" />
+                </svg></button>
+            <div class="slick-slider-testimonials px-10 relative z-0">
+                <div class="py-20 px-2.5 h-full">
+                    <div class="p-5 relative overflow-visible drop-shadow-lg text-center min-h-[382px] flex flex-col h-full bg-[#efefef]">
+                        <figure class="flex absolute -top-16 left-1/2 -translate-x-1/2 justify-center">
+                            <img width="120" sizes="(max-width: 130px) 100vw, 120px" loading="lazy" src="<?php echo get_template_directory_uri() ?>/media/reviews/Manisha-Sharma-Prasad.png" alt="Manisha Sharma Prasad">
+                            <figcaption class="sr-only">Manisha Sharma Prasad</figcaption>
+                        </figure>
+                        <div class="flex flex-col flex-1 justify-between">
+                            <p class="text-xl mt-[70px]">
+                                It's been a very insightful journey all through, varied dimensions covered brilliantly with relevant case studies and very interactive sessions with faculty and peers
                             </p>
+                            <div class="mt-5">
+                                <p class="uppercase text-lg font-bold text-primary">Manisha Sharma Prasad</p>
+                                <p class="text-lg">
+                                    SVP & Head Human Resources
+                                    <br>
+                                    CRIF India & South Asia
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="py-20 px-2.5 h-full">
-                <div class="p-5 relative overflow-visible drop-shadow-lg text-center min-h-[382px] flex flex-col h-full bg-[#efefef]">
-                    <figure class="flex absolute -top-16 left-1/2 -translate-x-1/2 justify-center">
-                        <img width="120" src="<?php echo get_template_directory_uri() ?>/media/reviews/Mainak-Chaki.png" alt="Mainak Chaki">
-                        <figcaption class="sr-only">Mainak Chaki</figcaption>
-                    </figure>
-                    <div class="flex flex-col flex-1 justify-between">
-                        <p class="text-xl mt-[70px]">
-                            Excellent faculty! Their knowledge dissemination and connection with the whole cohort was fantastic.
-                        </p>
-                        <div class="mt-5">
-                            <p class="uppercase text-lg font-bold text-primary">Mainak Chaki</p>
-                            <p class="text-lg">
-                                Group Head Human Resources
-                                <br>
-                                KK Birla Group
+                <div class="py-20 px-2.5 h-full">
+                    <div class="p-5 relative overflow-visible drop-shadow-lg text-center min-h-[382px] flex flex-col h-full bg-[#efefef]">
+                        <figure class="flex absolute -top-16 left-1/2 -translate-x-1/2 justify-center">
+                            <img width="120" sizes="(max-width: 130px) 100vw, 120px" loading="lazy" src="<?php echo get_template_directory_uri() ?>/media/reviews/Mainak-Chaki.png" alt="Mainak Chaki">
+                            <figcaption class="sr-only">Mainak Chaki</figcaption>
+                        </figure>
+                        <div class="flex flex-col flex-1 justify-between">
+                            <p class="text-xl mt-[70px]">
+                                Excellent faculty! Their knowledge dissemination and connection with the whole cohort was fantastic.
                             </p>
+                            <div class="mt-5">
+                                <p class="uppercase text-lg font-bold text-primary">Mainak Chaki</p>
+                                <p class="text-lg">
+                                    Group Head Human Resources
+                                    <br>
+                                    KK Birla Group
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="py-20 px-2.5 h-full">
-                <div class="p-5 relative overflow-visible drop-shadow-lg text-center min-h-[382px] flex flex-col h-full bg-[#efefef]">
-                    <figure class="flex absolute -top-16 left-1/2 -translate-x-1/2 justify-center">
-                        <img width="120" src="<?php echo get_template_directory_uri() ?>/media/reviews/Shipra-Gairola.png" alt="Shipra Gairola">
-                        <figcaption class="sr-only">Shipra Gairola</figcaption>
-                    </figure>
-                    <div class="flex flex-col flex-1 justify-between">
-                        <p class="text-xl mt-[70px]">
-                            It was good to understand more evolved HR concepts and case studies prevalent across markets.
-                        </p>
-                        <div class="mt-5">
-                            <p class="uppercase text-lg font-bold text-primary">Shipra Gairola</p>
-                            <p class="text-lg">
-                                SVP & Head Human Resources
-                                <br>
-                                CRIF India & South Asia
+                <div class="py-20 px-2.5 h-full">
+                    <div class="p-5 relative overflow-visible drop-shadow-lg text-center min-h-[382px] flex flex-col h-full bg-[#efefef]">
+                        <figure class="flex absolute -top-16 left-1/2 -translate-x-1/2 justify-center">
+                            <img width="120" sizes="(max-width: 130px) 100vw, 120px" loading="lazy" src="<?php echo get_template_directory_uri() ?>/media/reviews/Shipra-Gairola.png" alt="Shipra Gairola">
+                            <figcaption class="sr-only">Shipra Gairola</figcaption>
+                        </figure>
+                        <div class="flex flex-col flex-1 justify-between">
+                            <p class="text-xl mt-[70px]">
+                                It was good to understand more evolved HR concepts and case studies prevalent across markets.
                             </p>
+                            <div class="mt-5">
+                                <p class="uppercase text-lg font-bold text-primary">Shipra Gairola</p>
+                                <p class="text-lg">
+                                    SVP & Head Human Resources
+                                    <br>
+                                    CRIF India & South Asia
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="py-20 px-2.5 h-full">
+                    <div class="p-5 relative overflow-visible drop-shadow-lg text-center min-h-[382px] flex flex-col h-full bg-[#efefef]">
+                        <figure class="flex absolute -top-16 left-1/2 -translate-x-1/2 justify-center">
+                            <img width="120" sizes="(max-width: 130px) 100vw, 120px" loading="lazy" src="<?php echo get_template_directory_uri() ?>/media/reviews/Manisha-Sharma-Prasad.png" alt="Manisha Sharma Prasad">
+                            <figcaption class="sr-only">Manisha Sharma Prasad</figcaption>
+                        </figure>
+                        <div class="flex flex-col flex-1 justify-between">
+                            <p class="text-xl mt-[70px]">
+                                It's been a very insightful journey all through, varied dimensions covered brilliantly with relevant case studies and very interactive sessions with faculty and peers
+                            </p>
+                            <div class="mt-5">
+                                <p class="uppercase text-lg font-bold text-primary">Manisha Sharma Prasad</p>
+                                <p class="text-lg">
+                                    SVP & Head Human Resources
+                                    <br>
+                                    CRIF India & South Asia
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-20 px-2.5 h-full">
+                    <div class="p-5 relative overflow-visible drop-shadow-lg text-center min-h-[382px] flex flex-col h-full bg-[#efefef]">
+                        <figure class="flex absolute -top-16 left-1/2 -translate-x-1/2 justify-center">
+                            <img width="120" sizes="(max-width: 130px) 100vw, 120px" loading="lazy" src="<?php echo get_template_directory_uri() ?>/media/reviews/Mainak-Chaki.png" alt="Mainak Chaki">
+                            <figcaption class="sr-only">Mainak Chaki</figcaption>
+                        </figure>
+                        <div class="flex flex-col flex-1 justify-between">
+                            <p class="text-xl mt-[70px]">
+                                Excellent faculty! Their knowledge dissemination and connection with the whole cohort was fantastic.
+                            </p>
+                            <div class="mt-5">
+                                <p class="uppercase text-lg font-bold text-primary">Mainak Chaki</p>
+                                <p class="text-lg">
+                                    Group Head Human Resources
+                                    <br>
+                                    KK Birla Group
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-20 px-2.5 h-full">
+                    <div class="p-5 relative overflow-visible drop-shadow-lg text-center min-h-[382px] flex flex-col h-full bg-[#efefef]">
+                        <figure class="flex absolute -top-16 left-1/2 -translate-x-1/2 justify-center">
+                            <img width="120" sizes="(max-width: 130px) 100vw, 120px" loading="lazy" src="<?php echo get_template_directory_uri() ?>/media/reviews/Shipra-Gairola.png" alt="Shipra Gairola">
+                            <figcaption class="sr-only">Shipra Gairola</figcaption>
+                        </figure>
+                        <div class="flex flex-col flex-1 justify-between">
+                            <p class="text-xl mt-[70px]">
+                                It was good to understand more evolved HR concepts and case studies prevalent across markets.
+                            </p>
+                            <div class="mt-5">
+                                <p class="uppercase text-lg font-bold text-primary">Shipra Gairola</p>
+                                <p class="text-lg">
+                                    SVP & Head Human Resources
+                                    <br>
+                                    CRIF India & South Asia
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
-        <div class="w-fit border-2 border-primary rounded-xl py-5 px-8 max-w-xl mx-auto">
+        <div class="w-fit border-4 border-primary rounded-xl py-5 px-8 max-w-xl mx-auto">
             <h2 class="md:text-4xl text-2xl font-bold text-primary text-center">
                 Who Should Apply?
             </h2>
@@ -494,7 +561,7 @@ get_header()
                 </li>
             </ul>
             <div class="flex justify-center">
-                <a href="#" class="block px-5 font-medium uppercase py-3 rounded bg-primary text-white w-fit text-center">Apply Now</a>
+                <a href="/eligibility" class="no-underline hover:text-white/80 block px-5 font-medium uppercase py-3 rounded bg-primary text-white w-fit text-center">Apply Now</a>
             </div>
         </div>
         <div class="text-center mt-3">
@@ -502,7 +569,7 @@ get_header()
                 The ILR School at Cornell University is collaborating with XED to offer a portfolio of high-impact programs for senior leaders.
             </p>
         </div>
-        <div class="mt-10">
+        <div class="mt-10 md:px-20 px-5">
             <h2 class="md:text-4xl text-2xl font-bold mb-8 text-center text-[#636363]">
                 Inquire for your organization
             </h2>
@@ -513,7 +580,7 @@ get_header()
                 Learn with your colleagues and friends. We offer special discounts for groups
             </p>
             <div class="flex justify-center">
-                <a href="#" class="block px-5 font-medium uppercase py-3 rounded border border-primary text-primary w-fit text-center border-solid">Get In Touch</a>
+                <a href="/get-in-touch" class="block no-underline hover:text-primary/80 px-5 font-medium uppercase py-3 rounded border border-primary text-primary w-fit text-center border-solid">Get In Touch</a>
             </div>
             <p class="mt-5">
                 Please note that in the event of a global or regional catastrophe, or any unforeseen circumstances, the Program’s schedule, delivery method, faculty, and associated elements are subject to change at the sole discretion of the university.
