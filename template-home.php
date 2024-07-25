@@ -9,13 +9,13 @@ $program_overview_sec = get_field("program_overview_section");
     <section id="get-brochure" class="md:flex">
         <div class="flex-1">
             <figure class="h-full w-full">
-                <img class="w-full h-full md:min-h-[700px] object-cover" src="<?php echo get_template_directory_uri() ?>/media/hero-image.webp" alt="" sizimagees="(max-width: 130px) 100vw, 130px">
+                <img class="w-full h-full md:min-h-[700px] object-cover" src="<?php echo get_template_directory_uri() ?>/media/hero-image.webp" alt="" sizes="(max-width: 130px) 100vw, 130px">
                 <figcaption></figcaption>
             </figure>
         </div>
-        <div class="flex-1 bg-[#636363] text-white">
+        <div class="flex-1 bg-gray-300">
             <div class="md:py-10 md:px-20 p-5 main-form">
-                <?php echo do_shortcode('[wpforms id="126" title="true"]');
+                <?php echo do_shortcode('[wpforms id="663" title="true"]');
                 ?>
             </div>
         </div>
@@ -23,35 +23,42 @@ $program_overview_sec = get_field("program_overview_section");
     <section class="md:px-20 md:py-10 p-5 flex md:flex-row flex-col items-center justify-center md:gap-20 gap-10">
         <div class="flex-1">
             <h2 class="md:text-4xl text-2xl text-center font-bold text-[#636363]">
-                <?php echo $program_overview_sec["title"]; ?>
+                Program Overview
             </h2>
-            <div class="mt-3 text-justify">
-                <?php echo $program_overview_sec["description"]; ?>
-            </div>
+            <p class="mt-3 text-justify">
+                To shape the future of work and the organization of the future, today’s HR leaders and CHRO’s need to reimagine the basic tenets of Human Resource Management. To thrive in this ever-changing and complex ecosystem, HR leaders need a new set of skills and expertise. Cornell’s CHRO Leadership Program is designed to empower senior HR professionals to tackle the challenges of the new normal.
+            </p>
         </div>
         <div class="flex-1">
-            <?php $program_table = $program_overview_sec["program_table"];
-            ?>
-            <ul class="border-2 list-none max-w-[370px] border-primary rounded-3xl px-5 divide-y-2 divide-primary">
-                <?php foreach ($program_table["list"] as $item) { ?>
-                    <li class="flex items-center gap-5 py-5 text-primary">
-                        <img width="50" sizes="(max-width: 50px) 100vw, 50px" loading="lazy" src="<?php echo $item["icon"] ?>" alt="icon">
-                        <div>
-                            <h3 class="text-xl">
-                                <?php echo $item["subtitle"] ?>
-                            </h3>
-                            <p class="text-2xl font-bold"><?php echo $item["title"] ?></p>
-
-                            <?php if (!empty($item['action'])) { ?>
-                                <?php
-                                $item_action = $item["action"];
-                                ?>
-                                <button class="mt-3 block font-bold underline" onclick="my_modal_2.showModal()"><?php echo $item_action["title"] ?></button>
-                            <?php } ?>
-
-                        </div>
-                    </li>
-                <?php } ?>
+            <ul class="border-2 max-w-[370px] border-primary rounded-3xl px-5 divide-y-2 divide-primary">
+                <li class="flex items-center gap-5 py-5 text-primary">
+                    <img width="50" src="<?php echo get_template_directory_uri() ?>/media/icon-1.png" alt="icon">
+                    <div>
+                        <h3 class="text-xl">
+                            STARTS ON
+                        </h3>
+                        <p class="text-2xl font-bold">TBD</p>
+                    </div>
+                </li>
+                <li class="flex items-center gap-5 py-5 text-primary">
+                    <img width="50" src="<?php echo get_template_directory_uri() ?>/media/icon-2.png" alt="icon">
+                    <div>
+                        <h3 class="text-xl">
+                            DURATION
+                        </h3>
+                        <p class="text-2xl font-bold">4 MONTHS</p>
+                    </div>
+                </li>
+                <li class="flex items-center gap-5 py-5 text-primary">
+                    <img width="50" src="<?php echo get_template_directory_uri() ?>/media/icon-3.png" alt="icon">
+                    <div>
+                        <h3 class="text-xl">
+                            PROGRAM FEE
+                        </h3>
+                        <p class="text-2xl font-bold">US$ 4,000</p>
+                        <a href="#" class="mt-3 block font-bold underline">Easy EMI Options Available</a>
+                    </div>
+                </li>
             </ul>
         </div>
     </section>
@@ -62,7 +69,7 @@ $program_overview_sec = get_field("program_overview_section");
         <ul class="list-none flex flex-wrap gap-10 items-center justify-center">
             <li class="space-y-4 text-center w-fit sm:basis-1/4 basis-full flex-1">
                 <figure class="flex items-center justify-center">
-                    <img height="130" loading="lazy" class="h-[110px] object-contain" src="<?php echo get_template_directory_uri() ?>/media/benefit-1.png" alt="" sizimagees="(max-width: 130px) 100vw, 130px">
+                    <img height="130" loading="lazy" class="h-[110px] object-contain" src="<?php echo get_template_directory_uri() ?>/media/benefit-1.png" alt="" sizes="(max-width: 130px) 100vw, 130px">
                     <figcaption></figcaption>
                 </figure>
                 <p>
@@ -80,7 +87,7 @@ $program_overview_sec = get_field("program_overview_section");
             </li>
             <li class="space-y-4 text-center w-fit sm:basis-1/4 basis-full flex-1">
                 <figure class="flex items-center justify-center">
-                    <img height="130" loading="lazy" class="h-[110px] object-contain" src="<?php echo get_template_directory_uri() ?>/media/benefit-3.png" alt="" sizimagees="(max-width: 130px) 100vw, 130px">
+                    <img height="130" loading="lazy" class="h-[110px] object-contain" src="<?php echo get_template_directory_uri() ?>/media/benefit-3.png" alt="" sizes="(max-width: 130px) 100vw, 130px">
                     <figcaption></figcaption>
                 </figure>
                 <p>
@@ -89,7 +96,7 @@ $program_overview_sec = get_field("program_overview_section");
             </li>
             <li class="space-y-4 text-center w-fit sm:basis-1/4 basis-full flex-1">
                 <figure class="flex items-center justify-center">
-                    <img height="130" loading="lazy" class="h-[110px] object-contain" src="<?php echo get_template_directory_uri() ?>/media/benefit-4.png" alt="" sizimagees="(max-width: 130px) 100vw, 130px">
+                    <img height="130" loading="lazy" class="h-[110px] object-contain" src="<?php echo get_template_directory_uri() ?>/media/benefit-4.png" alt="" sizes="(max-width: 130px) 100vw, 130px">
                     <figcaption></figcaption>
                 </figure>
                 <p>
@@ -98,7 +105,7 @@ $program_overview_sec = get_field("program_overview_section");
             </li>
             <li class="space-y-4 text-center w-fit sm:basis-1/4 basis-full flex-1">
                 <figure class="flex items-center justify-center">
-                    <img height="130" loading="lazy" class="h-[110px] object-contain" src="<?php echo get_template_directory_uri() ?>/media/benefit-5.png" alt="" sizimagees="(max-width: 130px) 100vw, 130px">
+                    <img height="130" loading="lazy" class="h-[110px] object-contain" src="<?php echo get_template_directory_uri() ?>/media/benefit-5.png" alt="" sizes="(max-width: 130px) 100vw, 130px">
                     <figcaption></figcaption>
                 </figure>
                 <p>
@@ -107,7 +114,7 @@ $program_overview_sec = get_field("program_overview_section");
             </li>
             <li class="space-y-4 text-center w-fit sm:basis-1/4 basis-full flex-1">
                 <figure class="flex items-center justify-center">
-                    <img height="130" loading="lazy" class="h-[110px] object-contain" src="<?php echo get_template_directory_uri() ?>/media/benefit-6.png" alt="" sizimagees="(max-width: 130px) 100vw, 130px">
+                    <img height="130" loading="lazy" class="h-[110px] object-contain" src="<?php echo get_template_directory_uri() ?>/media/benefit-6.png" alt="" sizes="(max-width: 130px) 100vw, 130px">
                     <figcaption></figcaption>
                 </figure>
                 <p>

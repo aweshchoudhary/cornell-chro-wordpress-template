@@ -187,11 +187,11 @@
 }
 
 .main-form .wpforms-title {
-  @apply md:text-4xl text-2xl font-medium text-center text-white !important;
+  @apply md:text-4xl text-2xl font-medium text-center !important;
 }
 
 .main-form .wpforms-field-label {
-  @apply text-white mb-1 !important;
+  @apply mb-1 !important;
 }
 
 .main-form .wpforms-field-required {

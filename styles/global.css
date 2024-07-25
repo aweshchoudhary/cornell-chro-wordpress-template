@@ -1830,6 +1830,10 @@ details.collapse summary::-webkit-details-marker {
   width: 140px;
 }
 
+.w-\[30px\] {
+  width: 30px;
+}
+
 .w-\[60\%\] {
   width: 60%;
 }
@@ -2068,6 +2072,11 @@ details.collapse summary::-webkit-details-marker {
   background-color: rgb(255 255 255 / 0.85);
 }
 
+.bg-gray-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
+
 .object-contain {
   -o-object-fit: contain;
      object-fit: contain;
@@ -2157,6 +2166,10 @@ details.collapse summary::-webkit-details-marker {
 
 .pb-10 {
   padding-bottom: 2.5rem;
+}
+
+.pl-0 {
+  padding-left: 0px;
 }
 
 .pt-10 {
@@ -2290,8 +2303,6 @@ details.collapse summary::-webkit-details-marker {
   font-size: 1.5rem !important;
   line-height: 2rem !important;
   font-weight: 500 !important;
-  --tw-text-opacity: 1 !important;
-  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
 }
 
 @media (min-width: 768px) {
@@ -2303,8 +2314,6 @@ details.collapse summary::-webkit-details-marker {
 
 .main-form .wpforms-field-label {
   margin-bottom: 0.25rem !important;
-  --tw-text-opacity: 1 !important;
-  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
 }
 
 .main-form .wpforms-field-required {
@@ -2553,12 +2562,24 @@ details.collapse summary::-webkit-details-marker {
 }
 
 @media (min-width: 768px) {
+  .md\:mt-10 {
+    margin-top: 2.5rem;
+  }
+
   .md\:flex {
     display: flex;
   }
 
   .md\:min-h-\[700px\] {
     min-height: 700px;
+  }
+
+  .md\:w-32 {
+    width: 8rem;
+  }
+
+  .md\:w-\[40px\] {
+    width: 40px;
   }
 
   .md\:w-\[650px\] {
@@ -2581,6 +2602,10 @@ details.collapse summary::-webkit-details-marker {
     flex-shrink: 1;
   }
 
+  .md\:basis-1\/2 {
+    flex-basis: 50%;
+  }
+
   .md\:basis-1\/4 {
     flex-basis: 25%;
   }
@@ -2597,8 +2622,16 @@ details.collapse summary::-webkit-details-marker {
     gap: 0px;
   }
 
+  .md\:gap-10 {
+    gap: 2.5rem;
+  }
+
   .md\:gap-20 {
     gap: 5rem;
+  }
+
+  .md\:gap-5 {
+    gap: 1.25rem;
   }
 
   .md\:overflow-x-hidden {
@@ -2660,11 +2693,6 @@ details.collapse summary::-webkit-details-marker {
     padding-top: 5rem;
   }
 
-  .md\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
   .md\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -2687,6 +2715,10 @@ details.collapse summary::-webkit-details-marker {
 }
 
 @media (min-width: 1024px) {
+  .lg\:gap-20 {
+    gap: 5rem;
+  }
+
   .lg\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
