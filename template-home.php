@@ -13,14 +13,14 @@ $program_overview_sec = get_field("program_overview_section");
                 <figcaption></figcaption>
             </figure>
         </div>
-        <div class="flex-1 bg-gray-300">
+        <div class="flex-1 bg-[#636363] text-white">
             <div class="md:py-10 md:px-20 p-5 main-form">
                 <?php echo do_shortcode('[wpforms id="663" title="true"]');
                 ?>
             </div>
         </div>
     </section>
-    <section class="md:px-20 md:py-10 p-5 flex md:flex-row flex-col items-center justify-center md:gap-20 gap-10">
+    <section class="section flex md:flex-row flex-col items-center justify-center md:gap-20 gap-10">
         <div class="flex-1">
             <h2 class="md:text-4xl text-2xl text-center font-bold text-[#636363]">
                 Program Overview
@@ -70,7 +70,7 @@ $program_overview_sec = get_field("program_overview_section");
             </form>
         </dialog>
     </section>
-    <section class="md:p-20 p-5 bg-[#636363] text-white">
+    <section class="section bg-[#636363] text-white">
         <h2 class="md:text-4xl text-2xl font-bold mb-16 text-center">
             Program Benefits
         </h2>
@@ -131,7 +131,7 @@ $program_overview_sec = get_field("program_overview_section");
             </li>
         </ul>
     </section>
-    <section class="md:p-20 p-5">
+    <section class="section">
         <h2 class="md:text-4xl text-2xl font-bold mb-8 text-center text-[#636363]">
             Curriculum
         </h2>
@@ -235,7 +235,7 @@ $program_overview_sec = get_field("program_overview_section");
             </div>
         </div>
     </section>
-    <section class="md:p-20 p-5">
+    <section class="section">
         <div class="text-center">
             <p class="mb-10">
                 Indicative content, subject to change based on university guidelines
@@ -246,136 +246,283 @@ $program_overview_sec = get_field("program_overview_section");
             </figure>
         </div>
     </section>
-    <section class="md:p-10 p-5">
-        <h2 class="md:text-4xl text-2xl font-bold mb-8 text-center text-[#636363]">
-            Learn from Cornell Faculty
-        </h2>
-        <ul class="flex md:flex-wrap md:overflow-x-hidden overflow-x-auto md:w-auto w-screen gap-5">
-            <li class="flex md:flex-row flex-col gap-4 p-6 border border-primary md:basis-1/4 basis-[90%] md:shrink shrink-0 flex-1">
-                <figure class="shrink-0">
-                    <img width="80" height="80" sizes="(min-width: 768px) 40vw, 70vw" loading="lazy" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/Rebecca-Kehoe.png" alt="Rebecca Kehoe">
-                    <figcaption class="sr-only">Rebecca Kehoe</figcaption>
-                </figure>
-                <div>
-                    <h3 class="text-lg font-bold">Rebecca Kehoe</h3>
-                    <p class="mb-3">Associate Prof, Human Resource Studies</p>
-                    <p class="text-sm">Rebecca Kehoe is an Associate Professor of Human Resource Studies in the ILR School at Cornell University. She conducts research in the area of strategic human resource management, with an interest in better understanding how and when organizations achieve human resource-based competitive advantage. She holds a Ph.D., M.S., and B.S. from Cornell University. Prior to joining the faculty of the ILR School, she served on the faculty of Rutgers University. She has taught courses in Human Resource Management and Business Strategy.</p>
+    <section class="section-y">
+        <div class="section-x">
+            <h2 class="md:text-4xl text-2xl font-bold mb-8 text-center text-[#636363]">
+                Learn from Cornell Faculty
+            </h2>
+            <ul class="md:flex hidden md:flex-wrap md:overflow-x-hidden overflow-x-auto md:w-auto w-screen gap-5">
+                <li class="flex md:flex-row flex-col gap-4 p-6 border border-primary md:basis-1/4 basis-[90%] md:shrink shrink-0 flex-1">
+                    <figure class="shrink-0">
+                        <img width="80" height="80" sizes="(min-width: 768px) 40vw, 70vw" loading="lazy" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/Rebecca-Kehoe.png" alt="Rebecca Kehoe">
+                        <figcaption class="sr-only">Rebecca Kehoe</figcaption>
+                    </figure>
+                    <div>
+                        <h3 class="text-lg font-bold">Rebecca Kehoe</h3>
+                        <p class="mb-3">Associate Prof, Human Resource Studies</p>
+                        <p class="text-sm">Rebecca Kehoe is an Associate Professor of Human Resource Studies in the ILR School at Cornell University. She conducts research in the area of strategic human resource management, with an interest in better understanding how and when organizations achieve human resource-based competitive advantage. She holds a Ph.D., M.S., and B.S. from Cornell University. Prior to joining the faculty of the ILR School, she served on the faculty of Rutgers University. She has taught courses in Human Resource Management and Business Strategy.</p>
+                    </div>
+                </li>
+                <li class="flex md:flex-row flex-col gap-4 p-6 border border-primary md:basis-1/4 basis-[90%] md:shrink shrink-0 flex-1">
+                    <figure class="shrink-0">
+                        <img width="80" height="80" sizes="(min-width: 768px) 40vw, 70vw" loading="lazy" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/Bradford-Bell.png" alt="Bradford Bell">
+                        <figcaption class="sr-only">Bradford Bell</figcaption>
+                    </figure>
+                    <div>
+                        <h3 class="text-lg font-bold">Bradford Bell</h3>
+                        <p class="mb-3">William J. Conaty Professor of Strategic Human Resources</p>
+                        <p class="text-sm">Bradford S. Bell is the William J. Conaty Professor in Strategic Human Resources and Director of the Center for Advanced Human Resource Studies. He received his B.A. in Psychology from the University of Maryland at College Park and his M.A. and Ph.D. in Industrial and Organizational Psychology from Michigan State University. He worked in the management and organization development department of First USA Bank/Banc One and has worked as an HR consultant for multiple private and public firms. Dr. Bell is a fellow of the Society for Industrial and Organizational Psychology and American Psychological Association.</p>
+                    </div>
+                </li>
+                <li class="flex md:flex-row flex-col gap-4 p-6 border border-primary md:basis-1/4 basis-[90%] md:shrink shrink-0 flex-1">
+                    <figure class="shrink-0">
+                        <img width="80" height="80" sizes="(min-width: 768px) 40vw, 70vw" loading="lazy" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/John-Hausknecht.png" alt="John Hausknecht">
+                        <figcaption class="sr-only">John Hausknecht</figcaption>
+                    </figure>
+                    <div>
+                        <h3 class="text-lg font-bold">John Hausknecht</h3>
+                        <p class="mb-3">Professor, Human Resource Studies</p>
+                        <p class="text-sm">John Hausknecht is professor of human resource studies at Cornell University’s ILR School. His teaching, research, and consulting focuses on HR analytics and staffing-related topics including employee selection and turnover. Professor Hausknecht recently served as the academic director for Cornell’s ILR Executive Education and currently leads the HR analytics working group series for Cornell’s Center for Advanced HR Studies.</p>
+                    </div>
+                </li>
+                <li class="flex md:flex-row flex-col gap-4 p-6 border border-primary md:basis-1/4 basis-[90%] md:shrink shrink-0 flex-1">
+                    <figure class="shrink-0">
+                        <img width="80" height="80" sizes="(min-width: 768px) 40vw, 70vw" loading="lazy" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/Diane-Burton.png" alt="M. Diane Burton">
+                        <figcaption class="sr-only">M. Diane Burton</figcaption>
+                    </figure>
+                    <div>
+                        <h3 class="text-lg font-bold">M. Diane Burton</h3>
+                        <p class="mb-3">Joseph R. Rich ’80 Professor, Human Resource Studies and
+                            Academic Director, Institute for Compensation Studies </p>
+                        <p class="text-sm">M. Diane Burton is a professor in the ILR School at Cornell
+                            University. Her primary appointment is in human resource
+                            studies with courtesy appointments in organizational behavior
+                            and sociology. Prior to joining the Cornell faculty in 2009, she
+                            was a faculty member at the MIT Sloan School of Management.
+                            She earned her Ph.D. in sociology at Stanford University and
+                            served as a lecturer and researcher in organizational behavior
+                            and human resources management at the Stanford Graduate
+                            School of Business.</p>
+                    </div>
+                </li>
+                <li class="flex md:flex-row flex-col gap-4 p-6 border border-primary md:basis-1/4 basis-[90%] md:shrink shrink-0 flex-1">
+                    <figure class="shrink-0">
+                        <img width="80" height="80" sizes="(min-width: 768px) 40vw, 70vw" loading="lazy" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/Tae-Youn-Park.png" alt="Tae Youn Park">
+                        <figcaption class="sr-only">Tae Youn Park</figcaption>
+                    </figure>
+                    <div>
+                        <h3 class="text-lg font-bold">Tae Youn Park</h3>
+                        <p class="mb-3">Associate Professor, Human Resource Studies</p>
+                        <p class="text-sm">Tae-Youn Park (Ph.D., University of Minnesota) is the Associate
+                            Professor of Human Resource Studies in the ILR School, Cornell
+                            University. His work has been published in many influential
+                            journals across disciplines. He currently serves on the editorial
+                            board of Academy of Management Journal, Personnel
+                            Psychology, and Compensation and Benefit Review. Before
+                            joining the ILR School, Tae-Youn was a Brownlee O. Currey Jr.
+                            Dean’s Faculty Fellow, assistant professor of Management in
+                            the Owen Graduate School of Management. </p>
+                    </div>
+                </li>
+                <li class="flex md:flex-row flex-col gap-4 p-6 border border-primary md:basis-1/4 basis-[90%] md:shrink shrink-0 flex-1">
+                    <figure class="shrink-0">
+                        <img width="80" height="80" sizes="(min-width: 768px) 40vw, 70vw" loading="lazy" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/Adam-Seth-Litwin.png" alt="Adam Seth Litwin">
+                        <figcaption class="sr-only">Adam Seth Litwin</figcaption>
+                    </figure>
+                    <div>
+                        <h3 class="text-lg font-bold">Adam Seth Litwin</h3>
+                        <p class="mb-3">Associate Professor</p>
+                        <p class="text-sm">Adam Seth Litwin is Associate Professor of Industrial and Labor Relations at Cornell’s ILR School and serves as an associate editor at its flagship journal, the ILR Review. Litwin has published a mix of empirical and conceptual studies intersecting the areas of labor relations and technological change, in both industrial relations and medical journals. Litwin joined Cornell’s ILR faculty in the fall of 2014 after serving as a standing faculty member at Johns Hopkins University, where he held appointments in the Carey Business School and the School of Medicine.</p>
+                    </div>
+                </li>
+                <li class="flex md:flex-row flex-col gap-4 p-6 border border-primary md:basis-1/4 basis-[90%] md:shrink shrink-0 flex-1">
+                    <figure class="shrink-0">
+                        <img width="80" height="80" sizes="(min-width: 768px) 40vw, 70vw" loading="lazy" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/Ben-Rissing.png" alt="Ben Rissing">
+                        <figcaption class="sr-only">Ben Rissing</figcaption>
+                    </figure>
+                    <div>
+                        <h3 class="text-lg font-bold">Ben Rissing</h3>
+                        <p class="mb-3">Associate Professor</p>
+                        <p class="text-sm">Ben A. Rissing studies employment-relevant decisions in organizations, including businesses, government, and academic institutions. He earned his doctorate in management from the Massachusetts Institute of Technology (MIT) Sloan School of Management; master’s degrees in management science and engineering management from MIT and Duke University, respectively; and a bachelor’s degree in mechanical engineering from the University of Virginia. Before joining Cornell University, Ben was the Hugh W. Pearson Visiting Professor of Commerce, Organizations and Entrepreneurship at Brown University. </p>
+                    </div>
+                </li>
+                <li class="flex md:flex-row flex-col gap-4 p-6 border border-primary md:basis-1/4 basis-[90%] md:shrink shrink-0 flex-1">
+                    <figure class="shrink-0">
+                        <img width="80" height="80" sizes="(min-width: 768px) 40vw, 70vw" loading="lazy" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/Lisa-Csencsits.png" alt="Lisa Csencsits">
+                        <figcaption class="sr-only">Lisa Csencsits</figcaption>
+                    </figure>
+                    <div>
+                        <h3 class="text-lg font-bold">Lisa Csencsits</h3>
+                        <p class="mb-3">Associate Director</p>
+                        <p class="text-sm">Lisa Csencsits, Associate Director for Executive Education at Cornell University, ILR, is responsible for the design, development and delivery of customized learning and capability development programs. Lisa holds a B.A. In Psychology from Adelphi University and a M.A. in Industrial/Organizational Psychology from Hofstra University. Ms. Csencsits, as an Organizational Development Practitioner, leverages her experience working with large privately and publicly held companies, as well as her research and educational expertise to provide programs grounded in theory with practical solutions to enhance participant learning and professional development. </p>
+                    </div>
+                </li>
+                <li class="flex md:flex-row flex-col gap-4 p-6 border border-primary md:basis-1/4 basis-[90%] md:shrink shrink-0 flex-1">
+                    <figure class="shrink-0">
+                        <img width="80" height="80" sizes="(min-width: 768px) 40vw, 70vw" loading="lazy" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/Alwin-Smith.png" alt="Alwin Smith">
+                        <figcaption class="sr-only">Alwin Smith</figcaption>
+                    </figure>
+                    <div>
+                        <h3 class="text-lg font-bold">Alwin Smith</h3>
+                        <p class="mb-3">Adjunct Instructor</p>
+                        <p class="text-sm">Alvin specializes in Executive Development and Diversity Management. He is an Instructor at Cornell University, teaching Diversity & Inclusion. Alvin is a “storyteller” who provides a compelling first-hand account of the lessons he learned, and the experiences he endured during his career. He has a Bachelor of Science in Management from NYU Stern and a Marketing Management degree from Atlanta University Graduate School. He is also an American Management Association certified trainer.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="relative md:hidden">
+            <button class="custom-slick-prev absolute top-1/2 -translate-y-1/2 md:left-3 left-1 text-3xl md:p-3 p-1 rounded-full bg-primary text-white z-[99]"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 12H4m0 0l6-6m-6 6l6 6" />
+                </svg></button>
+            <button class="custom-slick-next absolute top-1/2 -translate-y-1/2 md:right-3 right-1 text-3xl md:p-3 p-1 rounded-full bg-primary text-white z-[99]"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                    <path fill="currentColor" fill-rule="evenodd" d="M13.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06l4.72-4.72H4a.75.75 0 0 1 0-1.5h14.19l-4.72-4.72a.75.75 0 0 1 0-1.06" clip-rule="evenodd" />
+                </svg></button>
+            <div class="slick-slider-testimonials w-[90vw] mx-auto relative z-0">
+                <div class="p-2.5">
+                    <div class="p-6 border border-primary h-full">
+                        <figure class="shrink-0">
+                            <img width="80" height="80" sizes="(min-width: 768px) 40vw, 70vw" loading="lazy" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/Rebecca-Kehoe.png" alt="Rebecca Kehoe">
+                            <figcaption class="sr-only">Rebecca Kehoe</figcaption>
+                        </figure>
+                        <div>
+                            <h3 class="text-lg font-bold">Rebecca Kehoe</h3>
+                            <p class="mb-3">Associate Prof, Human Resource Studies</p>
+                            <p class="text-sm">Rebecca Kehoe is an Associate Professor of Human Resource Studies in the ILR School at Cornell University. She conducts research in the area of strategic human resource management, with an interest in better understanding how and when organizations achieve human resource-based competitive advantage. She holds a Ph.D., M.S., and B.S. from Cornell University. Prior to joining the faculty of the ILR School, she served on the faculty of Rutgers University. She has taught courses in Human Resource Management and Business Strategy.</p>
+                        </div>
+                    </div>
                 </div>
-            </li>
-            <li class="flex md:flex-row flex-col gap-4 p-6 border border-primary md:basis-1/4 basis-[90%] md:shrink shrink-0 flex-1">
-                <figure class="shrink-0">
-                    <img width="80" height="80" sizes="(min-width: 768px) 40vw, 70vw" loading="lazy" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/Bradford-Bell.png" alt="Bradford Bell">
-                    <figcaption class="sr-only">Bradford Bell</figcaption>
-                </figure>
-                <div>
-                    <h3 class="text-lg font-bold">Bradford Bell</h3>
-                    <p class="mb-3">William J. Conaty Professor of Strategic Human Resources</p>
-                    <p class="text-sm">Bradford S. Bell is the William J. Conaty Professor in Strategic Human Resources and Director of the Center for Advanced Human Resource Studies. He received his B.A. in Psychology from the University of Maryland at College Park and his M.A. and Ph.D. in Industrial and Organizational Psychology from Michigan State University. He worked in the management and organization development department of First USA Bank/Banc One and has worked as an HR consultant for multiple private and public firms. Dr. Bell is a fellow of the Society for Industrial and Organizational Psychology and American Psychological Association.</p>
+                <div class="p-2.5">
+                    <div class="p-6 border border-primary h-full">
+                        <figure class="shrink-0">
+                            <img width="80" height="80" sizes="(min-width: 768px) 40vw, 70vw" loading="lazy" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/Bradford-Bell.png" alt="Bradford Bell">
+                            <figcaption class="sr-only">Bradford Bell</figcaption>
+                        </figure>
+                        <div>
+                            <h3 class="text-lg font-bold">Bradford Bell</h3>
+                            <p class="mb-3">William J. Conaty Professor of Strategic Human Resources</p>
+                            <p class="text-sm">Bradford S. Bell is the William J. Conaty Professor in Strategic Human Resources and Director of the Center for Advanced Human Resource Studies. He received his B.A. in Psychology from the University of Maryland at College Park and his M.A. and Ph.D. in Industrial and Organizational Psychology from Michigan State University. He worked in the management and organization development department of First USA Bank/Banc One and has worked as an HR consultant for multiple private and public firms. Dr. Bell is a fellow of the Society for Industrial and Organizational Psychology and American Psychological Association.</p>
+                        </div>
+                    </div>
                 </div>
-            </li>
-            <li class="flex md:flex-row flex-col gap-4 p-6 border border-primary md:basis-1/4 basis-[90%] md:shrink shrink-0 flex-1">
-                <figure class="shrink-0">
-                    <img width="80" height="80" sizes="(min-width: 768px) 40vw, 70vw" loading="lazy" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/John-Hausknecht.png" alt="John Hausknecht">
-                    <figcaption class="sr-only">John Hausknecht</figcaption>
-                </figure>
-                <div>
-                    <h3 class="text-lg font-bold">John Hausknecht</h3>
-                    <p class="mb-3">Professor, Human Resource Studies</p>
-                    <p class="text-sm">John Hausknecht is professor of human resource studies at Cornell University’s ILR School. His teaching, research, and consulting focuses on HR analytics and staffing-related topics including employee selection and turnover. Professor Hausknecht recently served as the academic director for Cornell’s ILR Executive Education and currently leads the HR analytics working group series for Cornell’s Center for Advanced HR Studies.</p>
+                <div class="p-2.5">
+                    <div class="p-6 border border-primary h-full">
+                        <figure class="shrink-0">
+                            <img width="80" height="80" sizes="(min-width: 768px) 40vw, 70vw" loading="lazy" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/John-Hausknecht.png" alt="John Hausknecht">
+                            <figcaption class="sr-only">John Hausknecht</figcaption>
+                        </figure>
+                        <div>
+                            <h3 class="text-lg font-bold">John Hausknecht</h3>
+                            <p class="mb-3">Professor, Human Resource Studies</p>
+                            <p class="text-sm">John Hausknecht is professor of human resource studies at Cornell University’s ILR School. His teaching, research, and consulting focuses on HR analytics and staffing-related topics including employee selection and turnover. Professor Hausknecht recently served as the academic director for Cornell’s ILR Executive Education and currently leads the HR analytics working group series for Cornell’s Center for Advanced HR Studies.</p>
+                        </div>
+                    </div>
                 </div>
-            </li>
-            <li class="flex md:flex-row flex-col gap-4 p-6 border border-primary md:basis-1/4 basis-[90%] md:shrink shrink-0 flex-1">
-                <figure class="shrink-0">
-                    <img width="80" height="80" sizes="(min-width: 768px) 40vw, 70vw" loading="lazy" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/Diane-Burton.png" alt="M. Diane Burton">
-                    <figcaption class="sr-only">M. Diane Burton</figcaption>
-                </figure>
-                <div>
-                    <h3 class="text-lg font-bold">M. Diane Burton</h3>
-                    <p class="mb-3">Joseph R. Rich ’80 Professor, Human Resource Studies and
-                        Academic Director, Institute for Compensation Studies </p>
-                    <p class="text-sm">M. Diane Burton is a professor in the ILR School at Cornell
-                        University. Her primary appointment is in human resource
-                        studies with courtesy appointments in organizational behavior
-                        and sociology. Prior to joining the Cornell faculty in 2009, she
-                        was a faculty member at the MIT Sloan School of Management.
-                        She earned her Ph.D. in sociology at Stanford University and
-                        served as a lecturer and researcher in organizational behavior
-                        and human resources management at the Stanford Graduate
-                        School of Business.</p>
+                <div class="p-2.5">
+                    <div class="p-6 border border-primary h-full">
+                        <figure class="shrink-0">
+                            <img width="80" height="80" sizes="(min-width: 768px) 40vw, 70vw" loading="lazy" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/Diane-Burton.png" alt="M. Diane Burton">
+                            <figcaption class="sr-only">M. Diane Burton</figcaption>
+                        </figure>
+                        <div>
+                            <h3 class="text-lg font-bold">M. Diane Burton</h3>
+                            <p class="mb-3">Joseph R. Rich ’80 Professor, Human Resource Studies and
+                                Academic Director, Institute for Compensation Studies </p>
+                            <p class="text-sm">M. Diane Burton is a professor in the ILR School at Cornell
+                                University. Her primary appointment is in human resource
+                                studies with courtesy appointments in organizational behavior
+                                and sociology. Prior to joining the Cornell faculty in 2009, she
+                                was a faculty member at the MIT Sloan School of Management.
+                                She earned her Ph.D. in sociology at Stanford University and
+                                served as a lecturer and researcher in organizational behavior
+                                and human resources management at the Stanford Graduate
+                                School of Business.</p>
+                        </div>
+                    </div>
                 </div>
-            </li>
-            <li class="flex md:flex-row flex-col gap-4 p-6 border border-primary md:basis-1/4 basis-[90%] md:shrink shrink-0 flex-1">
-                <figure class="shrink-0">
-                    <img width="80" height="80" sizes="(min-width: 768px) 40vw, 70vw" loading="lazy" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/Tae-Youn-Park.png" alt="Tae Youn Park">
-                    <figcaption class="sr-only">Tae Youn Park</figcaption>
-                </figure>
-                <div>
-                    <h3 class="text-lg font-bold">Tae Youn Park</h3>
-                    <p class="mb-3">Associate Professor, Human Resource Studies</p>
-                    <p class="text-sm">Tae-Youn Park (Ph.D., University of Minnesota) is the Associate
-                        Professor of Human Resource Studies in the ILR School, Cornell
-                        University. His work has been published in many influential
-                        journals across disciplines. He currently serves on the editorial
-                        board of Academy of Management Journal, Personnel
-                        Psychology, and Compensation and Benefit Review. Before
-                        joining the ILR School, Tae-Youn was a Brownlee O. Currey Jr.
-                        Dean’s Faculty Fellow, assistant professor of Management in
-                        the Owen Graduate School of Management. </p>
+                <div class="p-2.5">
+                    <div class="p-6 border border-primary h-full">
+                        <figure class="shrink-0">
+                            <img width="80" height="80" sizes="(min-width: 768px) 40vw, 70vw" loading="lazy" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/Tae-Youn-Park.png" alt="Tae Youn Park">
+                            <figcaption class="sr-only">Tae Youn Park</figcaption>
+                        </figure>
+                        <div>
+                            <h3 class="text-lg font-bold">Tae Youn Park</h3>
+                            <p class="mb-3">Associate Professor, Human Resource Studies</p>
+                            <p class="text-sm">Tae-Youn Park (Ph.D., University of Minnesota) is the Associate
+                                Professor of Human Resource Studies in the ILR School, Cornell
+                                University. His work has been published in many influential
+                                journals across disciplines. He currently serves on the editorial
+                                board of Academy of Management Journal, Personnel
+                                Psychology, and Compensation and Benefit Review. Before
+                                joining the ILR School, Tae-Youn was a Brownlee O. Currey Jr.
+                                Dean’s Faculty Fellow, assistant professor of Management in
+                                the Owen Graduate School of Management. </p>
+                        </div>
+                    </div>
                 </div>
-            </li>
-            <li class="flex md:flex-row flex-col gap-4 p-6 border border-primary md:basis-1/4 basis-[90%] md:shrink shrink-0 flex-1">
-                <figure class="shrink-0">
-                    <img width="80" height="80" sizes="(min-width: 768px) 40vw, 70vw" loading="lazy" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/Adam-Seth-Litwin.png" alt="Adam Seth Litwin">
-                    <figcaption class="sr-only">Adam Seth Litwin</figcaption>
-                </figure>
-                <div>
-                    <h3 class="text-lg font-bold">Adam Seth Litwin</h3>
-                    <p class="mb-3">Associate Professor</p>
-                    <p class="text-sm">Adam Seth Litwin is Associate Professor of Industrial and Labor Relations at Cornell’s ILR School and serves as an associate editor at its flagship journal, the ILR Review. Litwin has published a mix of empirical and conceptual studies intersecting the areas of labor relations and technological change, in both industrial relations and medical journals. Litwin joined Cornell’s ILR faculty in the fall of 2014 after serving as a standing faculty member at Johns Hopkins University, where he held appointments in the Carey Business School and the School of Medicine.</p>
+                <div class="p-2.5">
+                    <div class="p-6 border border-primary h-full">
+                        <figure class="shrink-0">
+                            <img width="80" height="80" sizes="(min-width: 768px) 40vw, 70vw" loading="lazy" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/Adam-Seth-Litwin.png" alt="Adam Seth Litwin">
+                            <figcaption class="sr-only">Adam Seth Litwin</figcaption>
+                        </figure>
+                        <div>
+                            <h3 class="text-lg font-bold">Adam Seth Litwin</h3>
+                            <p class="mb-3">Associate Professor</p>
+                            <p class="text-sm">Adam Seth Litwin is Associate Professor of Industrial and Labor Relations at Cornell’s ILR School and serves as an associate editor at its flagship journal, the ILR Review. Litwin has published a mix of empirical and conceptual studies intersecting the areas of labor relations and technological change, in both industrial relations and medical journals. Litwin joined Cornell’s ILR faculty in the fall of 2014 after serving as a standing faculty member at Johns Hopkins University, where he held appointments in the Carey Business School and the School of Medicine.</p>
+                        </div>
+                    </div>
                 </div>
-            </li>
-            <li class="flex md:flex-row flex-col gap-4 p-6 border border-primary md:basis-1/4 basis-[90%] md:shrink shrink-0 flex-1">
-                <figure class="shrink-0">
-                    <img width="80" height="80" sizes="(min-width: 768px) 40vw, 70vw" loading="lazy" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/Ben-Rissing.png" alt="Ben Rissing">
-                    <figcaption class="sr-only">Ben Rissing</figcaption>
-                </figure>
-                <div>
-                    <h3 class="text-lg font-bold">Ben Rissing</h3>
-                    <p class="mb-3">Associate Professor</p>
-                    <p class="text-sm">Ben A. Rissing studies employment-relevant decisions in organizations, including businesses, government, and academic institutions. He earned his doctorate in management from the Massachusetts Institute of Technology (MIT) Sloan School of Management; master’s degrees in management science and engineering management from MIT and Duke University, respectively; and a bachelor’s degree in mechanical engineering from the University of Virginia. Before joining Cornell University, Ben was the Hugh W. Pearson Visiting Professor of Commerce, Organizations and Entrepreneurship at Brown University. </p>
+                <div class="p-2.5">
+                    <div class="p-6 border border-primary h-full">
+                        <figure class="shrink-0">
+                            <img width="80" height="80" sizes="(min-width: 768px) 40vw, 70vw" loading="lazy" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/Ben-Rissing.png" alt="Ben Rissing">
+                            <figcaption class="sr-only">Ben Rissing</figcaption>
+                        </figure>
+                        <div>
+                            <h3 class="text-lg font-bold">Ben Rissing</h3>
+                            <p class="mb-3">Associate Professor</p>
+                            <p class="text-sm">Ben A. Rissing studies employment-relevant decisions in organizations, including businesses, government, and academic institutions. He earned his doctorate in management from the Massachusetts Institute of Technology (MIT) Sloan School of Management; master’s degrees in management science and engineering management from MIT and Duke University, respectively; and a bachelor’s degree in mechanical engineering from the University of Virginia. Before joining Cornell University, Ben was the Hugh W. Pearson Visiting Professor of Commerce, Organizations and Entrepreneurship at Brown University. </p>
+                        </div>
+                    </div>
                 </div>
-            </li>
-            <li class="flex md:flex-row flex-col gap-4 p-6 border border-primary md:basis-1/4 basis-[90%] md:shrink shrink-0 flex-1">
-                <figure class="shrink-0">
-                    <img width="80" height="80" sizes="(min-width: 768px) 40vw, 70vw" loading="lazy" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/Lisa-Csencsits.png" alt="Lisa Csencsits">
-                    <figcaption class="sr-only">Lisa Csencsits</figcaption>
-                </figure>
-                <div>
-                    <h3 class="text-lg font-bold">Lisa Csencsits</h3>
-                    <p class="mb-3">Associate Director</p>
-                    <p class="text-sm">Lisa Csencsits, Associate Director for Executive Education at Cornell University, ILR, is responsible for the design, development and delivery of customized learning and capability development programs. Lisa holds a B.A. In Psychology from Adelphi University and a M.A. in Industrial/Organizational Psychology from Hofstra University. Ms. Csencsits, as an Organizational Development Practitioner, leverages her experience working with large privately and publicly held companies, as well as her research and educational expertise to provide programs grounded in theory with practical solutions to enhance participant learning and professional development. </p>
+                <div class="p-2.5">
+                    <div class="p-6 border border-primary h-full">
+                        <figure class="shrink-0">
+                            <img width="80" height="80" sizes="(min-width: 768px) 40vw, 70vw" loading="lazy" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/Lisa-Csencsits.png" alt="Lisa Csencsits">
+                            <figcaption class="sr-only">Lisa Csencsits</figcaption>
+                        </figure>
+                        <div>
+                            <h3 class="text-lg font-bold">Lisa Csencsits</h3>
+                            <p class="mb-3">Associate Director</p>
+                            <p class="text-sm">Lisa Csencsits, Associate Director for Executive Education at Cornell University, ILR, is responsible for the design, development and delivery of customized learning and capability development programs. Lisa holds a B.A. In Psychology from Adelphi University and a M.A. in Industrial/Organizational Psychology from Hofstra University. Ms. Csencsits, as an Organizational Development Practitioner, leverages her experience working with large privately and publicly held companies, as well as her research and educational expertise to provide programs grounded in theory with practical solutions to enhance participant learning and professional development. </p>
+                        </div>
+                    </div>
                 </div>
-            </li>
-            <li class="flex md:flex-row flex-col gap-4 p-6 border border-primary md:basis-1/4 basis-[90%] md:shrink shrink-0 flex-1">
-                <figure class="shrink-0">
-                    <img width="80" height="80" sizes="(min-width: 768px) 40vw, 70vw" loading="lazy" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/Alwin-Smith.png" alt="Alwin Smith">
-                    <figcaption class="sr-only">Alwin Smith</figcaption>
-                </figure>
-                <div>
-                    <h3 class="text-lg font-bold">Alwin Smith</h3>
-                    <p class="mb-3">Adjunct Instructor</p>
-                    <p class="text-sm">Alvin specializes in Executive Development and Diversity Management. He is an Instructor at Cornell University, teaching Diversity & Inclusion. Alvin is a “storyteller” who provides a compelling first-hand account of the lessons he learned, and the experiences he endured during his career. He has a Bachelor of Science in Management from NYU Stern and a Marketing Management degree from Atlanta University Graduate School. He is also an American Management Association certified trainer.</p>
+                <div class="p-2.5">
+                    <div class="p-6 border border-primary h-full">
+                        <figure class="shrink-0">
+                            <img width="80" height="80" sizes="(min-width: 768px) 40vw, 70vw" loading="lazy" class="md:w-[80px] w-[140px]" src="<?php echo get_template_directory_uri() ?>/media/teachers/Alwin-Smith.png" alt="Alwin Smith">
+                            <figcaption class="sr-only">Alwin Smith</figcaption>
+                        </figure>
+                        <div>
+                            <h3 class="text-lg font-bold">Alwin Smith</h3>
+                            <p class="mb-3">Adjunct Instructor</p>
+                            <p class="text-sm">Alvin specializes in Executive Development and Diversity Management. He is an Instructor at Cornell University, teaching Diversity & Inclusion. Alvin is a “storyteller” who provides a compelling first-hand account of the lessons he learned, and the experiences he endured during his career. He has a Bachelor of Science in Management from NYU Stern and a Marketing Management degree from Atlanta University Graduate School. He is also an American Management Association certified trainer.</p>
+                        </div>
+                    </div>
                 </div>
-            </li>
-        </ul>
-        <p class="text-gray-500 text-center mt-5">
-            <i>
-                Indicative faculty, subject to change based on availability and university guidelines
-            </i>
-        </p>
+            </div>
+
+            <p class="text-gray-500 text-center mt-5">
+                <i>
+                    Indicative faculty, subject to change based on availability and university guidelines
+                </i>
+            </p>
     </section>
-    <section class="md:pt-20 pt-10 border-t-4 border-[#636363]">
-        <div class="md:px-20 px-5">
+    <section class="section-y md:min-h-[750px] h-[550px] relative bg-gray-400 border-t-4 border-[#636363]">
+        <div class="section-x">
             <h2 class="md:text-4xl text-2xl font-bold mb-8 text-center text-[#636363]">
                 Certificate
             </h2>
@@ -386,7 +533,7 @@ $program_overview_sec = get_field("program_overview_section");
             <figcaption class="sr-only">cornell unversitiy program certificate</figcaption>
         </figure>
 
-        <div class="md:px-10 px-5 md:pb-20 pb-10 pt-32 -translate-y-20 -z-10 text-center space-y-2 text-sm font-light bg-primary text-white">
+        <div class="section absolute left-0 bottom-0 md:h-[45%] h-[50%] w-full flex flex-col justify-end text-center space-y-2 text-sm font-light bg-primary text-white">
             <p>
                 <i>
                     Upon successful completion of the program, participants will be awarded a digitally verifiable certificate by Cornell University
@@ -399,10 +546,12 @@ $program_overview_sec = get_field("program_overview_section");
             </p>
         </div>
     </section>
-    <section class="md:py-20 p-5 pt-10">
-        <h2 class="md:text-4xl px-20 text-2xl font-bold mb-8 text-center text-[#636363]">
-            Testimonials
-        </h2>
+    <section class="section-y">
+        <div class="section-x">
+            <h2 class="md:text-4xl px-20 text-2xl font-bold mb-8 text-center text-[#636363]">
+                Testimonials
+            </h2>
+        </div>
         <div class="relative">
             <button class="custom-slick-prev absolute top-1/2 -translate-y-1/2 md:left-3 left-1 text-3xl md:p-3 p-1 rounded-full bg-primary text-white z-[99]"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                     <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 12H4m0 0l6-6m-6 6l6 6" />
@@ -410,7 +559,7 @@ $program_overview_sec = get_field("program_overview_section");
             <button class="custom-slick-next absolute top-1/2 -translate-y-1/2 md:right-3 right-1 text-3xl md:p-3 p-1 rounded-full bg-primary text-white z-[99]"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                     <path fill="currentColor" fill-rule="evenodd" d="M13.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06l4.72-4.72H4a.75.75 0 0 1 0-1.5h14.19l-4.72-4.72a.75.75 0 0 1 0-1.06" clip-rule="evenodd" />
                 </svg></button>
-            <div class="slick-slider-testimonials md:px-10 relative z-0">
+            <div class="slick-slider-testimonials relative z-0 w-[90vw] mx-auto">
                 <div class="py-20 px-2.5 h-full">
                     <div class="p-5 relative overflow-visible drop-shadow-lg text-center min-h-[382px] flex flex-col h-full bg-[#efefef]">
                         <figure class="flex absolute -top-16 left-1/2 -translate-x-1/2 justify-center">
@@ -540,7 +689,9 @@ $program_overview_sec = get_field("program_overview_section");
 
             </div>
         </div>
-        <div class="w-fit border-4 border-primary rounded-xl py-5 px-8 max-w-xl mx-auto">
+    </section>
+    <section class="section-x">
+        <div class="border-4 border-primary rounded-xl py-5 px-8 max-w-xl mx-auto">
             <h2 class="md:text-4xl text-2xl font-bold text-primary text-center">
                 Who Should Apply?
             </h2>
@@ -584,7 +735,7 @@ $program_overview_sec = get_field("program_overview_section");
                 The ILR School at Cornell University is collaborating with XED to offer a portfolio of high-impact programs for senior leaders.
             </p>
         </div>
-        <div class="mt-10 md:px-20 px-5">
+        <div class="section">
             <h2 class="md:text-4xl text-2xl font-bold mb-8 text-center text-[#636363]">
                 Inquire for your organization
             </h2>

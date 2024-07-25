@@ -83,7 +83,7 @@
   body,
   html {
     font-family: "Roboto", sans-serif !important;
-    @apply outline-primary text-black scroll-smooth;
+    @apply outline-primary w-screen overflow-x-hidden text-black scroll-smooth;
   }
 
   /* Common Styles for Text */
@@ -182,16 +182,30 @@
   }
 }
 
+.section {
+  @apply md:px-20 md:py-10 p-5;
+}
+
+.section-x {
+  @apply md:px-20 px-5;
+}
+
+.section-y {
+  @apply md:py-10 py-5;
+}
+
+/* ----- */
+
 .main-form .wpforms-submit {
   @apply bg-[#C60000] py-5 h-fit px-8 rounded-lg uppercase border font-medium border-white border-solid !important;
 }
 
 .main-form .wpforms-title {
-  @apply md:text-4xl text-2xl font-medium text-center !important;
+  @apply md:text-4xl text-2xl font-medium text-center text-white !important;
 }
 
 .main-form .wpforms-field-label {
-  @apply mb-1 !important;
+  @apply mb-1 text-white !important;
 }
 
 .main-form .wpforms-field-required {
@@ -207,7 +221,7 @@
 }
 
 .main-form .form-link {
-  @apply text-[#ffa500] !important;
+  @apply text-[#1a73e8] !important;
 }
 
 .main-form .wpforms-required-label {
