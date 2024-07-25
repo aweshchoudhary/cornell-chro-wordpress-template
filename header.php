@@ -15,22 +15,22 @@
     <?php wp_body_open() ?>
 
     <header>
-        <div class="flex items-center justify-between md:py-10 md:px-28 px-5 py-8 md:gap-0 gap-20">
-            <figure>
-                <a href="/">
-                    <img src="<?php echo get_template_directory_uri() ?>/media/logo.jpg" alt="">
-                </a>
-                <figcaption></figcaption>
-            </figure>
-            <figure>
-                <a href="/">
-                    <img width="300" src="<?php echo get_template_directory_uri() ?>/media/ilr-logo.png" alt="">
-                </a>
-                <figcaption></figcaption>
-            </figure>
+        <div class="flex items-center justify-between md:py-5 md:px-20 px-5 py-5 md:gap-0 gap-20">
+            <a class="block" href="/">
+                <figure class="md:w-[100px] w-[50px]">
+                    <img class="w-full object-contain" src="<?php echo get_template_directory_uri() ?>/media/logo.jpg" alt="">
+                    <figcaption></figcaption>
+                </figure>
+            </a>
+            <a class="block" href="/">
+                <figure class="md:w-[250px] w-[160px]">
+                    <img class="w-full object-contain" src="<?php echo get_template_directory_uri() ?>/media/ilr-logo.png" alt="">
+                    <figcaption></figcaption>
+                </figure>
+            </a>
         </div>
-        <div class="bg-primary md:px-10 md:py-3 p-5">
-            <h2 class="font-bold text-white text-center lg:text-4xl md:text-3xl sm:text-2xl xs:text-xl ">CORNELL CHRO LEADERSHIP PROGRAM</h2>
+        <div class="bg-primary md:px-10 py-3 px-5">
+            <h2 class="font-bold text-white text-center md:text-3xl sm:text-2xl text-xl mb-0">CORNELL CHRO LEADERSHIP PROGRAM</h2>
         </div>
     </header>
 

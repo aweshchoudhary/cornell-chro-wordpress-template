@@ -56,11 +56,19 @@ $program_overview_sec = get_field("program_overview_section");
                             PROGRAM FEE
                         </h3>
                         <p class="text-2xl font-bold">US$ 4,000</p>
-                        <a href="#" class="mt-3 block font-bold underline">Easy EMI Options Available</a>
+                        <button class="mt-3 block font-bold underline" onclick="emi_form_modal.showModal()">Easy EMI Options Available</button>
                     </div>
                 </li>
             </ul>
         </div>
+        <dialog style="border-radius: 0 !important;" id="emi_form_modal" class="modal">
+            <div class="modal-box rounded-none md:p-10 p-5 md:max-w-[60%]">
+                <?php echo do_shortcode('[wpforms id="550" title="true"]'); ?>
+            </div>
+            <form method="dialog" class="modal-backdrop">
+                <button>Close</button>
+            </form>
+        </dialog>
     </section>
     <section class="md:p-20 p-5 bg-[#636363] text-white">
         <h2 class="md:text-4xl text-2xl font-bold mb-16 text-center">
@@ -396,13 +404,13 @@ $program_overview_sec = get_field("program_overview_section");
             Testimonials
         </h2>
         <div class="relative">
-            <button class="custom-slick-prev absolute top-1/2 -translate-y-1/2 left-3 text-3xl p-3 rounded-full bg-primary text-white z-[99]"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+            <button class="custom-slick-prev absolute top-1/2 -translate-y-1/2 md:left-3 left-1 text-3xl md:p-3 p-1 rounded-full bg-primary text-white z-[99]"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                     <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 12H4m0 0l6-6m-6 6l6 6" />
                 </svg></button>
-            <button class="custom-slick-next absolute top-1/2 -translate-y-1/2 right-3 text-3xl p-3 rounded-full bg-primary text-white z-[99]"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+            <button class="custom-slick-next absolute top-1/2 -translate-y-1/2 md:right-3 right-1 text-3xl md:p-3 p-1 rounded-full bg-primary text-white z-[99]"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                     <path fill="currentColor" fill-rule="evenodd" d="M13.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06l4.72-4.72H4a.75.75 0 0 1 0-1.5h14.19l-4.72-4.72a.75.75 0 0 1 0-1.06" clip-rule="evenodd" />
                 </svg></button>
-            <div class="slick-slider-testimonials px-10 relative z-0">
+            <div class="slick-slider-testimonials md:px-10 relative z-0">
                 <div class="py-20 px-2.5 h-full">
                     <div class="p-5 relative overflow-visible drop-shadow-lg text-center min-h-[382px] flex flex-col h-full bg-[#efefef]">
                         <figure class="flex absolute -top-16 left-1/2 -translate-x-1/2 justify-center">
@@ -410,11 +418,11 @@ $program_overview_sec = get_field("program_overview_section");
                             <figcaption class="sr-only">Manisha Sharma Prasad</figcaption>
                         </figure>
                         <div class="flex flex-col flex-1 justify-between">
-                            <p class="text-xl mt-[70px]">
+                            <p class="text-xl mt-[70px] mb-0">
                                 It's been a very insightful journey all through, varied dimensions covered brilliantly with relevant case studies and very interactive sessions with faculty and peers
                             </p>
                             <div class="mt-5">
-                                <p class="uppercase text-lg font-bold text-primary">Manisha Sharma Prasad</p>
+                                <p class="uppercase text-lg font-bold text-primary mb-0">Manisha Sharma Prasad</p>
                                 <p class="text-lg">
                                     SVP & Head Human Resources
                                     <br>
@@ -431,11 +439,11 @@ $program_overview_sec = get_field("program_overview_section");
                             <figcaption class="sr-only">Mainak Chaki</figcaption>
                         </figure>
                         <div class="flex flex-col flex-1 justify-between">
-                            <p class="text-xl mt-[70px]">
+                            <p class="text-xl mt-[70px] mb-0">
                                 Excellent faculty! Their knowledge dissemination and connection with the whole cohort was fantastic.
                             </p>
                             <div class="mt-5">
-                                <p class="uppercase text-lg font-bold text-primary">Mainak Chaki</p>
+                                <p class="uppercase text-lg font-bold text-primary mb-0">Mainak Chaki</p>
                                 <p class="text-lg">
                                     Group Head Human Resources
                                     <br>
@@ -452,11 +460,11 @@ $program_overview_sec = get_field("program_overview_section");
                             <figcaption class="sr-only">Shipra Gairola</figcaption>
                         </figure>
                         <div class="flex flex-col flex-1 justify-between">
-                            <p class="text-xl mt-[70px]">
+                            <p class="text-xl mt-[70px] mb-0">
                                 It was good to understand more evolved HR concepts and case studies prevalent across markets.
                             </p>
                             <div class="mt-5">
-                                <p class="uppercase text-lg font-bold text-primary">Shipra Gairola</p>
+                                <p class="uppercase text-lg font-bold text-primary mb-0">Shipra Gairola</p>
                                 <p class="text-lg">
                                     SVP & Head Human Resources
                                     <br>
@@ -473,11 +481,11 @@ $program_overview_sec = get_field("program_overview_section");
                             <figcaption class="sr-only">Manisha Sharma Prasad</figcaption>
                         </figure>
                         <div class="flex flex-col flex-1 justify-between">
-                            <p class="text-xl mt-[70px]">
+                            <p class="text-xl mt-[70px] mb-0">
                                 It's been a very insightful journey all through, varied dimensions covered brilliantly with relevant case studies and very interactive sessions with faculty and peers
                             </p>
                             <div class="mt-5">
-                                <p class="uppercase text-lg font-bold text-primary">Manisha Sharma Prasad</p>
+                                <p class="uppercase text-lg font-bold text-primary mb-0">Manisha Sharma Prasad</p>
                                 <p class="text-lg">
                                     SVP & Head Human Resources
                                     <br>
@@ -494,11 +502,11 @@ $program_overview_sec = get_field("program_overview_section");
                             <figcaption class="sr-only">Mainak Chaki</figcaption>
                         </figure>
                         <div class="flex flex-col flex-1 justify-between">
-                            <p class="text-xl mt-[70px]">
+                            <p class="text-xl mt-[70px] mb-0">
                                 Excellent faculty! Their knowledge dissemination and connection with the whole cohort was fantastic.
                             </p>
                             <div class="mt-5">
-                                <p class="uppercase text-lg font-bold text-primary">Mainak Chaki</p>
+                                <p class="uppercase text-lg font-bold text-primary mb-0">Mainak Chaki</p>
                                 <p class="text-lg">
                                     Group Head Human Resources
                                     <br>
@@ -515,11 +523,11 @@ $program_overview_sec = get_field("program_overview_section");
                             <figcaption class="sr-only">Shipra Gairola</figcaption>
                         </figure>
                         <div class="flex flex-col flex-1 justify-between">
-                            <p class="text-xl mt-[70px]">
+                            <p class="text-xl mt-[70px] mb-0">
                                 It was good to understand more evolved HR concepts and case studies prevalent across markets.
                             </p>
                             <div class="mt-5">
-                                <p class="uppercase text-lg font-bold text-primary">Shipra Gairola</p>
+                                <p class="uppercase text-lg font-bold text-primary mb-0">Shipra Gairola</p>
                                 <p class="text-lg">
                                     SVP & Head Human Resources
                                     <br>
@@ -547,7 +555,7 @@ $program_overview_sec = get_field("program_overview_section");
                         <path fill="currentColor" d="M1575 310q0 40-28 68l-724 724l-136 136q-28 28-68 28t-68-28l-136-136L53 740q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295l656-657q28-28 68-28t68 28l136 136q28 28 28 68" />
                     </svg>
                     <div>
-                        <p>10+ years of work experience and proven success in leading high performing teams / impactful projects</p>
+                        <p class="mb-0">10+ years of work experience and proven success in leading high performing teams / impactful projects</p>
                     </div>
                 </li>
                 <li class="flex items-center gap-3 py-5">
@@ -555,7 +563,7 @@ $program_overview_sec = get_field("program_overview_section");
                         <path fill="currentColor" d="M1575 310q0 40-28 68l-724 724l-136 136q-28 28-68 28t-68-28l-136-136L53 740q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295l656-657q28-28 68-28t68 28l136 136q28 28 28 68" />
                     </svg>
                     <div>
-                        <p>Have at least a Graduate degree</p>
+                        <p class="mb-0">Have at least a Graduate degree</p>
                     </div>
                 </li>
                 <li class="flex items-center gap-3 py-5">
@@ -563,7 +571,7 @@ $program_overview_sec = get_field("program_overview_section");
                         <path fill="currentColor" d="M1575 310q0 40-28 68l-724 724l-136 136q-28 28-68 28t-68-28l-136-136L53 740q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295l656-657q28-28 68-28t68 28l136 136q28 28 28 68" />
                     </svg>
                     <div>
-                        <p>Country of residence at the time of enrolling must be Latin America, South Asia, Middle East, Africa, Far East</p>
+                        <p class="mb-0">Country of residence at the time of enrolling must be Latin America, South Asia, Middle East, Africa, Far East</p>
                     </div>
                 </li>
             </ul>

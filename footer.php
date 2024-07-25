@@ -10,7 +10,7 @@
     </form>
 </dialog>
 
-<div class="overlay fixed bottom-0 left-0 z-[999] w-full bg-white/85 py-5 flex justify-center backdrop-blur">
+<div class="overlay fixed bottom-0 left-0 z-[999] w-full bg-white/85 py-3 flex justify-center backdrop-blur">
     <a href="/#get-brochure" class="text-white hover:text-white/80 block px-5 font-medium uppercase py-2.5 rounded bg-[#C60000] w-fit text-center">Download Brochure</a>
 </div>
 
@@ -93,8 +93,7 @@
         arrows: false,
         infinite: true,
         speed: 500,
-        autoplay: true,
-        autoplaySpeed: 1500,
+        autoplay: false,
         adaptiveHeight: true,
         lazyLoad: 'ondemand',
         slidesToShow: 3,
